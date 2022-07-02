@@ -1,5 +1,5 @@
 # frig 
-Figure cReation Is God-awful (on Windows).
+**F**igure c**R**eation **I**s **G**od-awful (on Windows).
 
 ## Installation 
 ```bash
