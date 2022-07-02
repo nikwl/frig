@@ -23,7 +23,7 @@ if __name__ == "__main__":
         coords = cv2.findNonZero((gray != 255).astype(np.uint8))
         x, y, w, h = cv2.boundingRect(coords)
         cropped = img[y:y+h, x:x+w, ...]
-        if not os.path.isdir(os.path.join(args.dir, "cropped")):
-            os.mkdir(os.path.join(args.dir, "cropped"))
-        cv2.imwrite(os.path.join(args.dir, "cropped", p), cropped)
+        if not os.path.isdir(os.path.join(args.dir, "stripped")):
+            os.mkdir(os.path.join(args.dir, "stripped"))
+        cv2.imwrite(os.path.join(args.dir, "stripped", p), cropped)
         print("Processed {}".format(os.path.join(args.dir, p)))
