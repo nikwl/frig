@@ -5,7 +5,7 @@ import subprocess
 
 def convert(path, ext):
     exe = os.environ.get(
-        'INKSCAPE_EXE',
+        'INKSCAPE_PATH',
         r"C:\Program Files\Inkscape\bin\inkscape.exe"
     )
     export_type = r"--export-type={}".format(ext)
