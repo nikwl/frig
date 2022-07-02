@@ -12,7 +12,7 @@ pip install git+https://github.com/nikwl/frig.git
 python -m frig.strip dir/to/strip
 ```
 
-(2) Convert all vectorized images in a directory to pdf. Designed for use on windows but should work on any OS. New pdfs are dumped into a `pdfized` directory.
+(2) Convert all vectorized images in a directory to pdf. Designed for use on windows but should work on any OS. New pdfs are dumped into the same directory as the input vectorized images.
 ```
 python -m frig.pdfize dir/to/pdfize
 ```
