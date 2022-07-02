@@ -27,9 +27,18 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(description="")
     arg_parser.add_argument(
         "dir",
-        help="directory to convert."
+        type=str,
+        help="directory to convert"
+    )
+    arg_parser.add_argument(
+        "--ext",
+        default=".svg",
+        type=str,
+        help="extension"
     )
     args = arg_parser.parse_args()
+    if not args.ext[0] == ".":
+        args.ext = "." + args.ext
     assert os.path.isdir(args.dir)
     for p in os.listdir(args.dir):
         if os.path.splitext(p)[-1] == args.ext:

@@ -9,7 +9,8 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(description="")
     arg_parser.add_argument(
         "dir",
-        help="directory to crop."
+        type=str,
+        help="directory to crop"
     )
     args = arg_parser.parse_args()
     assert os.path.isdir(args.dir)
