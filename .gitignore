@@ -1,0 +1,16 @@
+# Pycache
+*.pyc
+*/__pycache__
+
+# Environment files
+/env
+/venv
+
+# Package files 
+/build
+/dist
+/*.egg-info
+
+# Testing 
+/test
+temp.py
