@@ -12,7 +12,7 @@ pip install git+https://github.com/nikwl/frig.git
 python -m frig.crop dir/to/crop
 ```
 
-(2) Convert any vectorized image to svg. Designed for use on windows but should work on any OS. 
+(2) Convert any vectorized image to svg. Designed for use on windows but should work on any OS. New pdfs are dumped into a `pdfized` directory.
 ```
-python -m frig.convert_pdf dir/to/pdf-ize
+python -m frig.pdfize dir/to/pdfize
 ```
