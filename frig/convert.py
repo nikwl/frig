@@ -3,12 +3,12 @@ import argparse
 import subprocess
 
 
-def convert(path):
+def convert(path, ext):
     exe = os.environ.get(
         'INKSCAPE_EXE',
         r"C:\Program Files\Inkscape\bin\inkscape.exe"
     )
-    export_type = r"--export-type={}".format("pdf")
+    export_type = r"--export-type={}".format(ext)
     cmd = [
         exe,
         export_type,
@@ -32,7 +32,8 @@ if __name__ == "__main__":
     args = arg_parser.parse_args()
     assert os.path.isdir(args.dir)
     for p in os.listdir(args.dir):
-        if os.path.splitext(p)[-1] == ".svg":
+        if os.path.splitext(p)[-1] == args.ext:
             convert(
-                os.path.abspath(os.path.join(args.dir, p))
+                os.path.abspath(os.path.join(args.dir, p)),
+                ext="pdf",
             )
